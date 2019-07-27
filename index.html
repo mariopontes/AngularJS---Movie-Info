@@ -18,6 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
     <link rel="stylesheet" href="app/css/global.css">
 
@@ -26,8 +28,11 @@
     <script src="app/js/lib/angular-resource.min.js"></script>
 
     <script src="app/js/modules/main.js"></script>
+    <script src="app/js/services/videos-service.js"></script>
+    <script src="app/js/services/chartist-service.js"></script>
     <script src="app/js/controllers/video-controller.js"></script>
-    <script src="app/js/services/videosAPIService.js"></script>
+    <script src="app/js/controllers/chartist-controller.js"></script>
+
 
 </head>
 
@@ -37,6 +42,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                     <a class="navbar-brand title" href="/#!/home">Home</a>
+                    <a class="navbar-brand title sec_title" href="/#!/chartist">Chartist</a>
                     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
@@ -46,7 +52,6 @@
                     </div>
                 </nav>
             </div>
-
         </header>
 
         <div class="bg-dark">

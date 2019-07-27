@@ -15,6 +15,10 @@ angular.module("main", ['ngRoute', 'ngResource'])
                 templateUrl: "app/templates/videos-paginados.html",
                 controller: "videoController"
             })
+            .when("/chartist", {
+                templateUrl: "app/templates/chartist.html",
+                controller: "chartistController"
+            })
 
         $routeProvider.otherwise({ redirectTo: "/home" });
 

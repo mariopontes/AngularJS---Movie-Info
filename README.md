@@ -15,7 +15,9 @@ O projeto estara disponivel no http://localhost:3000
 
 O sistema em sí se trata de uma aplicação em Single Page Application angularJs que consume API's do THEMOVIEDB.
 
-O Projeto segue o padrão MVC, no qual existe um Modulo com sistema de rotas, um Controller para tres templates, um Serviço para o consumo da API.
+O Projeto segue o padrão MVC, no qual existe um Modulo com sistema de rotas, dois Controller para quatro templates, dois Serviços para o consumo da API.
 Havendo também a pasta CSS/Assets e por ultimo o JS/LIB que estão armazenadas todas as dependencias do angularJS.
+
+Frameworks/Bibliotecas usadas: Bootstrap e Chartist.
 
 O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.
