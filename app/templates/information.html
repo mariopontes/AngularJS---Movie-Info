@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="container container_top">
+        <div class="d-flex justify-content-center margin_adjs">
+            <div class="card" style="max-width: 700px;margin-right: 10px;min-width: 400px;">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{videoDetalhe.backdrop_path}}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{videoDetalhe.title}}</h5>
+                    <h5 class="card-title">Categoria(s) do Filme</h5>
+                    <div class="d-flex">
+                        <p ng-repeat="categoria in videoDetalhe.genres" class="card-text categorias">
+                            {{categoria.name}}&nbsp &nbsp
+                        </p>
+                    </div>
+
+                    <div class="box_star d-flex justify-content-between align-items-center">
+                        <p>Nota do publico:</p>
+                        <div class="d-flex align-items-center">
+                            <p class="avaliation">{{videoDetalhe.vote_average}}</p>
+                            <img class="img_star" src="app/css/assets/estrela.png">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card">
+                <h5 class="card-header">Informações sobre o filme</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Sinopse</h5>
+                    <p class="card-text">{{videoDetalhe.overview}}</p>
+                    <h5 class="card-title">Data de Lançamento</h5>
+                    <p>{{videoDetalhe.release_date}}</p>
+                    <h5 class="card-title">Produtores</h5>
+                    <div ng-repeat="companias in videoDetalhe.production_companies">
+                        <span>{{companias.name}} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p></p>
+
+
+
+    </div>
+
+</div>

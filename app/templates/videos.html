@@ -1,0 +1,22 @@
+<div class="bg-dark section_videos">
+    <div class="titles_trailers">
+        <h2>Filmes em Cartaz</h2>
+    </div>
+    <div class="container_videos container_top">
+        <div class="box_videos">
+            <div class="box_card" ng-repeat="video in videos.results | filter:busca">
+                <div class="card">
+                    <a href="/#!/video/{{video.id}}" ng-click="getInformation()">
+                        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{video.backdrop_path}}">
+                    </a>
+                </div>
+                <p class="title_video">{{video.title}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-danger" ng-click="trocaPage(1)" href="/#!/video/page/1">1</a>
+        <a class="btn btn-danger" ng-click="trocaPage(2)" href="/#!/video/page/2">2</a>
+        <a class="btn btn-danger" ng-click="trocaPage(3)" href="/#!/video/page/3">3</a>
+    </div>
