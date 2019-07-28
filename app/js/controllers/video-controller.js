@@ -1,11 +1,7 @@
 angular.module('main')
-    .controller('videoController', function ($scope, videosAPI, $routeParams, $http) {
-        $scope.titulo = 'teste';
-        const keyApi = "836e6df687832ba77e5908b9d89f4e88";
-        let valor_inicial = 1;
-
+    .controller('videoController', function ($scope, videosAPI, $routeParams, $http, config) {
         if ($routeParams.id) {
-            $http.get(`https://api.themoviedb.org/3/movie/${$routeParams.id}?api_key=${keyApi}&language=pt-BR`)
+            $http.get(`${config.baseUrl}${$routeParams.id}?api_key=${config.keyApi}&language=pt-BR`)
                 .then((result) => {
                     $scope.videoDetalhe = result.data;
                     console.log($scope.videoDetalhe);
@@ -13,7 +9,7 @@ angular.module('main')
         };
 
         if ($routeParams.nb) {
-            $http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${keyApi}&language=pt-BR&page=${$routeParams.nb}`)
+            $http.get(`${config.baseUrl}now_playing?api_key=${config.keyApi}&language=pt-BR&page=${$routeParams.nb}`)
                 .then((result) => {
                     result.data.results.forEach(element => {
                         if (element.backdrop_path == null) {
@@ -25,7 +21,7 @@ angular.module('main')
                 });
         };
 
-        videosAPI.buscaVideos(valor_inicial)
+        videosAPI.buscaVideos()
             .then((results) => {
                 $scope.videos = results.data;
             });
