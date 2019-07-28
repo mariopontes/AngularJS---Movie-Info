@@ -27,8 +27,8 @@ O intuito do sistema é mostar informações dos filmes mais atuais e que se enc
 
 ***Talvez seja necessario instalar as seguintes dependencias para rodar o script:
 
-1° npm install chromedriver
-2° npm install selenium-webdriver
+***1° npm install chromedriver
+***2° npm install selenium-webdriver
 
 Em seguida, com o sistema rodando na porta 'http://localhost:3000' basta abrir o prompt de comando no local do arquivo que se encontra no mesmo diretorio da index e executar:
 
