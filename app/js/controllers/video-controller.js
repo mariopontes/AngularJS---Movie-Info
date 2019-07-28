@@ -4,7 +4,6 @@ angular.module('main')
             $http.get(`${config.baseUrl}${$routeParams.id}?api_key=${config.keyApi}&language=pt-BR`)
                 .then((result) => {
                     $scope.videoDetalhe = result.data;
-                    console.log($scope.videoDetalhe);
                 });
         };
 
