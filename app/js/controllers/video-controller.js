@@ -30,4 +30,32 @@ angular.module('main')
                 (err) => { $scope.error = err }
             );
 
+
+
+        $scope.carregarTrailer = function () {
+            videosAPI.buscaUrl($routeParams.id)
+                .then(
+                    (results) => {
+                        if (results.data.results.length != 0) {
+                            let keyUrl;
+                            let arrayTrailer = results.data.results;
+                            let inputValue = document.getElementById('video');
+
+                            for (let i = 0; i < arrayTrailer.length; i++) {
+                                if (arrayTrailer[i].type == 'Trailer') {
+                                    keyUrl = arrayTrailer[i].key;
+                                    break;
+                                }
+                            }
+
+                            let urlConcatenada = `https://www.youtube.com/embed/${keyUrl}`;
+                            inputValue.src = urlConcatenada;
+
+                        } else {
+                            alert('Video indisponivel')
+                        }
+                    }
+                );
+        };
+
     });
