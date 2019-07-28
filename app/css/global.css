@@ -104,3 +104,6 @@ img[src="app/css/assets/img_not_found.png"] {
 .sec_title {
     margin-left: 25px;
 }
+#navbarSupportedContent{
+    justify-content: flex-end;
+}
