@@ -21,3 +21,17 @@ Havendo também a pasta CSS/Assets e por ultimo o JS/LIB que estão armazenadas 
 Frameworks/Bibliotecas usadas: Bootstrap e Chartist.
 
 O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.
+
+
+# Teste automatizado
+
+Necessarios instalar as seguintes dependencias:
+
+1° npm install chromedriver
+2° npm install selenium-webdriver
+
+Em seguida, com o sistema rodando na porta 'http://localhost:3000' basta abrir o prompt de comando no local do arquivo que se encontra no mesmo diretorio da index e executar:
+
+node teste_automatizado.js
+
+O teste irá abrir uma janela anomia e acessar a HOME do projeto em questão, não havendo problemas no carregamento da página, será informado o tempo que o teste levou para fazer.
