@@ -1,5 +1,6 @@
 # AngularJS---Movie-Info
-Web site de informações de filmes e trailer desenvolvido em angularJS em sua ultima versão
+
+**O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.**
 
 Para rodar o projeto localmente é necessario instalar os seguintes itens abaixo:
 
@@ -13,16 +14,36 @@ basta digitar angular-http-server -p 3000
 
 O projeto estara disponivel no http://localhost:3000
 
-O sistema em sí se trata de uma aplicação em Single Page Application angularJs que consume API's do THEMOVIEDB.
+O sistema em sí se trata de uma aplicação Single Page Application em AngularJs que consume API's do THEMOVIEDB.
 
-O Projeto segue o padrão MVC, no qual existe um Modulo com sistema de rotas, dois Controller para quatro templates, dois Serviços para o consumo da API.
-Havendo também a pasta CSS/Assets e por ultimo o JS/LIB que estão armazenadas todas as dependencias do angularJS.
+O Projeto segue o padrão MVC.
 
-Frameworks/Bibliotecas usadas: Bootstrap e Chartist.
+#Informação sobre a estrututa do sistema
 
-O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.
+* Modulo "main" é responsavel por todo o sistema e possui um controle de rotas.
+
+* Controller "videoController" responsavel por controlar e exibir informações em templates.html
+* Controller "chartistController" responsavel por controlar e exibir um gráfico contendo informações de (Nota x Video).
+
+* Template "video.html" responsavel pela view da home.
+* Template "video-paginados.html" quando clicado no botão de paginação é esse html que é renderizado na tela.
+* Template "information.html" responsavel pela view de detalhes dos videos.
+* Template "chartist.html" responsavel pela view de gráficos.
+* Template "ui-alert.html" responsavel pela view reutilizavel de mensagens de erro.
+
+* Service "videosAPI" responsavel por consumir dados da API e fornecer ao controller "videoController" que renderiza dados da "/home".
+* Service "chartistService" responsavel por consumir dados da API e fornecer ao controller "chartistController" que renderiza dados da "/chartist".
+
+* Directive "uiAlert" responsavel por modularizar mensagem de erro que pode ser usada em qualquer lugar com informações diferentes de acordo com a necessidade.
+
+* Pasta CSS/Assets local em que se armazena os arquivos .css e documentos como imagens, gifs e etcs... para estilização dos templates.
+
+* Pasta JS/LIB local que fica armazenado as dependencias do AngularJs.
+
+* Frameworks/Bibliotecas usadas: Bootstrap e Chartist.
 
 # Performace
+
 1° Para ganho de performance existe um sistema de paginação o qual traz um array de 20 objetos por pagina. O metodo para chamar API é usado apenas 1 unica vez
 na construção da pagina
 
@@ -39,4 +60,4 @@ Em seguida, com o sistema rodando na porta 'http://localhost:3000' basta abrir o
 
 node teste_automatizado.js
 
-O teste irá abrir uma janela anomia e acessar a HOME do projeto em questão, não havendo problemas no carregamento da página, será informado o tempo que o teste levou para fazer.
+O teste irá abrir uma janela anomia e acessar a HOME do projeto em questão, não havendo problemas no carregamento da página, será informado o tempo que o teste levou para fazer no console.
