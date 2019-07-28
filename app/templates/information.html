@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-if="videoDetalhe">
     <div class="container container_top">
         <div class="d-flex justify-content-center margin_adjs">
             <div class="card" style="max-width: 700px;margin-right: 10px;min-width: 400px;">
@@ -37,12 +37,9 @@
                 </div>
             </div>
         </div>
-
-
-        <p></p>
-
-
-
     </div>
-
 </div>
+
+<ui-alert ng-if="errorDetail" title="Erro: {{errorDetail.status}}">
+    {{errorDetail.data.status_message}}
+</ui-alert>
