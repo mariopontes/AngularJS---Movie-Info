@@ -22,6 +22,11 @@ Frameworks/Bibliotecas usadas: Bootstrap e Chartist.
 
 O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.
 
+# Performace
+1° Para ganho de performance existe um sistema de paginação o qual traz um array de 20 objetos por pagina. O metodo para chamar API é usado apenas 1 unica vez
+na construção da pagina
+
+2° Afim de não ultilizar o filter de angular de forma desnecessaria, foi incluido o Denbounce "O disparo do filter só ira acontecer após 500 ms".
 
 # Teste automatizado
 
