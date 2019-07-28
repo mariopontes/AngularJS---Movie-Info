@@ -25,7 +25,7 @@ O intuito do sistema é mostar informações dos filmes mais atuais e que se enc
 
 # Teste automatizado
 
-Necessarios instalar as seguintes dependencias:
+Necessario instalar as seguintes dependencias:
 
 1° npm install chromedriver
 2° npm install selenium-webdriver
