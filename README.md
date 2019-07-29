@@ -1,5 +1,8 @@
 # AngularJS---Movie-Info
 
+
+#Projeto hospedado no FireBase => https://trailerdefilmes.firebaseapp.com
+
 **O intuito do sistema é mostar informações dos filmes mais atuais e que se encontram em cartaz na atualidade.**
 
 Para rodar o projeto localmente é necessario instalar os seguintes itens abaixo:
