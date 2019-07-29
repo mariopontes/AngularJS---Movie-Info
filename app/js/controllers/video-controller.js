@@ -36,6 +36,12 @@ angular.module('main')
                     for (let i = 1; i < 4; i++) {
                         $scope.valorArray.valor.push(i)
                     }
+
+                    $scope.videos.results.forEach(element => {
+                        if (element.backdrop_path == null) {
+                            element.backdrop_path = 'img_not_found';
+                        };
+                    });
                 },
                 (err) => { $scope.error = err }
             );

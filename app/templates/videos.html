@@ -8,7 +8,8 @@
                 <div class="box_card" ng-repeat="video in videos.results | filter:busca">
                     <div class="card">
                         <a href="/#!/video/{{video.id}}" ng-click="getInformation()">
-                            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{video.backdrop_path}}">
+                            <img class="card-img-top"
+                                src="{{(video.backdrop_path == 'img_not_found') ? 'app/css/assets/img_not_found.png' : 'https://image.tmdb.org/t/p/w500' + video.backdrop_path}}">
                         </a>
                     </div>
                     <p class="title_video">{{video.title}}</p>
