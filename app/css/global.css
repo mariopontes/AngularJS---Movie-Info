@@ -139,3 +139,10 @@ img[src="app/css/assets/img_not_found.png"] {
 #video {
     z-index: 1;
 }
+
+.box_paginaton {
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}

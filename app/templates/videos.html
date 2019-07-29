@@ -15,9 +15,9 @@
                 </div>
             </div>
         </div>
-
-        <div ng-repeat="btn in valorArray.valor" style="text-align: center; margin-bottom: 15px;">
-            <a class="btn btn-danger" ng-click="trocaPage(1)" href="/#!/video/page/{{btn}}">{{btn}}</a>
+        <div class="box_paginaton">
+            <a ng-repeat="btn in valorArray.valor" class="btn btn-danger btn_pagination" style="margin: 5px;"
+                href="/#!/video/page/{{btn}}">{{btn}}</a>
         </div>
     </div>
 </div>

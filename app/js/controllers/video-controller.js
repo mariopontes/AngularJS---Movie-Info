@@ -33,7 +33,7 @@ angular.module('main')
                     $scope.videos = results.data
                     $scope.valorArray = { valor: [] }
 
-                    for (let i = 1; i < results.data.total_pages; i++) {
+                    for (let i = 1; i < 4; i++) {
                         $scope.valorArray.valor.push(i)
                     }
                 },
