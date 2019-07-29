@@ -146,3 +146,7 @@ img[src="app/css/assets/img_not_found.png"] {
     overflow: hidden;
     white-space: nowrap;
 }
+
+.header_titles h3 {
+    margin: 0;
+}
