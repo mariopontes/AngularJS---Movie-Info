@@ -1,8 +1,3 @@
-<div>
-    <button class="btn btn-danger" ng-click="carregarTrailer()">Trailer</button>
-    <iframe id="video" width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <div class="row" ng-if="videoDetalhe">
     <div class="container container_top">
         <div class="d-flex justify-content-center margin_adjs">
@@ -25,21 +20,32 @@
                             <img class="img_star" src="app/css/assets/estrela.png">
                         </div>
                     </div>
-
+                    <div class="btn_trailer">
+                        <button class="btn btn-danger" ng-click="carregarTrailer()">{{openTrailer}}</button>
+                    </div>
                 </div>
             </div>
             <div class="card">
-                <h5 class="card-header">Informações sobre o filme</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Sinopse</h5>
-                    <p class="card-text">{{videoDetalhe.overview}}</p>
-                    <h5 class="card-title">Data de Lançamento</h5>
-                    <p>{{videoDetalhe.release_date}}</p>
-                    <h5 class="card-title">Produtores</h5>
-                    <div ng-repeat="companias in videoDetalhe.production_companies">
-                        <span>{{companias.name}} </span>
+
+                <div class="box_trailer" ng-show="mostraTrailer">
+                    <div id="header-overlay"></div>
+                    <iframe id="video" width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div>
+                    <h5 class="card-header">Informações sobre o filme</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Sinopse</h5>
+                        <p class="card-text">{{videoDetalhe.overview}}</p>
+                        <h5 class="card-title">Data de Lançamento</h5>
+                        <p>{{videoDetalhe.release_date}}</p>
+                        <h5 class="card-title">Produtores</h5>
+                        <div ng-repeat="companias in videoDetalhe.production_companies">
+                            <span>{{companias.name}} </span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

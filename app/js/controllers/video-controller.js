@@ -1,6 +1,9 @@
 angular.module('main')
     .controller('videoController', function ($scope, videosAPI, $routeParams, $http, config) {
 
+        $scope.mostraTrailer = false;
+        $scope.openTrailer = 'Assita o Trailer';
+
         if ($routeParams.id) {
             $http.get(`${config.baseUrl}${$routeParams.id}?api_key=${config.keyApi}&language=pt-BR`)
                 .then(
@@ -47,9 +50,15 @@ angular.module('main')
                                     break;
                                 }
                             }
-
+                            $scope.mostraTrailer = !$scope.mostraTrailer;
                             let urlConcatenada = `https://www.youtube.com/embed/${keyUrl}`;
                             inputValue.src = urlConcatenada;
+
+                            if ($scope.mostraTrailer) {
+                                $scope.openTrailer = 'Fechar Trailer'
+                            } else {
+                                $scope.openTrailer = 'Assita o Trailer'
+                            }
 
                         } else {
                             alert('Video indisponivel')

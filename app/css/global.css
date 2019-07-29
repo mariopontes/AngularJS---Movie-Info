@@ -104,6 +104,37 @@ img[src="app/css/assets/img_not_found.png"] {
 .sec_title {
     margin-left: 25px;
 }
-#navbarSupportedContent{
+
+#navbarSupportedContent {
     justify-content: flex-end;
+}
+
+.btn_trailer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.box_trailer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 0;
+    opacity: .5;
+    visibility: visible;
+}
+
+#video {
+    z-index: 1;
 }
