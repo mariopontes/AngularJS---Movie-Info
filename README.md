@@ -4,6 +4,7 @@
 #Projeto hospedado no FireBase => https://trailerdefilmes.firebaseapp.com
 
 **O intuito do sistema é mostar informações e trailers dos filmes mais atuais e que se encontram em cartaz na atualidade.**
+Versão 1 - 100% funcional em desktops, próxima versão será implementado a responsividades para aparelhos móveis.
 
 Para rodar o projeto localmente é necessario instalar os seguintes itens abaixo:
 
