@@ -29,7 +29,14 @@ angular.module('main')
 
         videosAPI.buscaVideos()
             .then(
-                (results) => { $scope.videos = results.data },
+                (results) => {
+                    $scope.videos = results.data
+                    $scope.valorArray = { valor: [] }
+
+                    for (let i = 1; i < results.data.total_pages; i++) {
+                        $scope.valorArray.valor.push(i)
+                    }
+                },
                 (err) => { $scope.error = err }
             );
 
@@ -61,7 +68,7 @@ angular.module('main')
                             }
 
                         } else {
-                            alert('Video indisponivel')
+                            alert('Trailer indisponivel')
                         }
                     }
                 );
